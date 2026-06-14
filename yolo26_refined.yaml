@@ -1,5 +1,4 @@
 # YOLO26-Hybrid v2 — improved architecture for Gram-stain bacteria detection
-# Changes vs v1:
 #   1. Removed end2end / reg_max  → standard NMS Detect (fixes training instability)
 #   2. SPPF [1024,5] standard     → removes non-standard extended receptive field
 #   3. Top-down neck C3k2 False   → reduces decoder capacity (layers 13, 16)
@@ -7,7 +6,7 @@
 #   5. P3 refined: added CBAM     → spatial+channel attention for bacterial focus
 #   6. P5 neck C3k2 standard      → removes unstable [True, 0.5, True] args
 #   7. Detect includes P2         → 4-scale detection [P2, P3, P4, P5]
-#   Expected: mAP50 >= 0.931, stable training, no overfitting after epoch 100
+
 
 nc: 4
 scale: n
